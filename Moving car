@@ -1,0 +1,24 @@
+//Moving car
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<stdlib.h>
+void main(){
+int i = 0;
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+setbkcolor(BLUE);
+for(i;i<300;i++){
+line(100+i,100,250+i,100);//upperline
+line(100+i,100,100+i,175);//left line
+line(100+i,175,250+i,175);//Bottom Line
+line(250+i,100,250+i,175);//Right line
+circle(135+i,190,15);
+circle(215+i,190,15);
+delay(100);
+cleardevice();
+}
+getch();
+closegraph();
+}
