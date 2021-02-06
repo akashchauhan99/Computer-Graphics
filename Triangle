@@ -1,0 +1,13 @@
+//Triangle
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+line(100,200,300,200);//base
+line(100,200,200,50);//right
+line(300,200,200,50);//left 
+getch();
+closegraph();
+}
