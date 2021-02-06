@@ -1,0 +1,47 @@
+//Midpoint Circle
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void pixel(x_c,y_c,x,y){
+putpixel(x_c + x,y_c + y ,3);
+putpixel(x_c + y,y_c + x ,3);
+putpixel(x_c - y,y_c + x ,3);
+putpixel(x_c - x,y_c + y ,3);
+putpixel(x_c - x,y_c - y ,3);
+putpixel(x_c - y,y_c - x ,3);
+putpixel(x_c + y,y_c - x ,3);
+putpixel(x_c + x,y_c - y ,3);
+
+}
+void main(){
+int x,y,r,x_c,y_c,gd=DETECT,gm,p;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+clrscr();
+printf("Enter the radius : ");
+scanf("%d",&r);
+printf("\nEnter the value of x_c : ");
+scanf("%d",&x_c);
+printf("\nEnter the value of y_c : ");
+scanf("%d",&y_c);
+printf("\nRadius is : %d",r);
+printf("\nRadius is : %d",x_c);
+printf("\nRadius is : %d",y_c);
+x=0;
+y=r;
+p=1-r;
+pixel(x_c,y_c,x,y);
+for(x=0;x<y;x++){
+if(p<0){
+x=x+1;
+p=p+2*x+1;
+}
+else{
+x=x+1;
+y=y-1;
+p=p+(2*x-2*y)+1;
+}
+pixel(x_c,y_c,x,y);
+}
+getch();
+closegraph();
+}
