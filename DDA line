@@ -1,0 +1,32 @@
+//DDA line
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<graphics.h>
+void main(){
+int x1,y1,x2,y2,dx,dy,l,gd=DETECT,gm,i;
+float r=0.5;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+clrscr();
+printf("Enter the co-ordinates x1,y1 : ");
+scanf("%d %d",&x1,&y1);
+printf("Enter the co-ordinates x2,y2 : ");
+scanf("%d %d",&x2,&y2);
+dx=abs(x2-x1);
+dy=abs(y2-y1);
+if(dx>dy){
+l=dx;
+}else{
+l=dy;
+}
+dx=dx+r;
+dy=dy+r;
+for(i=1;i<=l;i++){
+putpixel(x1,y1,10);
+x1=x1+dx;
+y1=y1+dy;
+delay(100);
+}
+getch();
+closegraph();
+}
