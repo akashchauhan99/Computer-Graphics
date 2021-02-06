@@ -1,0 +1,11 @@
+//Ellipse
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+ellipse(250,250,0,360,50,150);
+getch();
+closegraph();
+}
