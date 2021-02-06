@@ -1,0 +1,11 @@
+//Rectangle
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\TURBOC3\\BGI");
+rectangle(100,200,400,100);
+getch();
+closegraph();
+}
